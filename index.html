@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./output.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Career &amp; Rewards Portal | Online Courses, Certifications &amp; Verified Programs</title>
+<meta name="description" content="Discover verified online courses, certification programs, and consumer reward programs for US residents. Browse trusted programs updated daily.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="US Career &amp; Rewards Portal | Online Courses, Certifications &amp; Verified Programs">
+<meta property="og:description" content="Discover verified online courses, certification programs, and consumer reward programs for US residents. Browse trusted programs updated daily.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="US Career &amp; Rewards Portal">
+<meta name="twitter:description" content="Verified online courses, certification programs, and reward programs for US residents.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%232563eb%22/><path d=%22M7 12l3.2 3.2L17 8.4%22 stroke=%22white%22 stroke-width=%222.2%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<style>
+  /* Base styles */
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #020617; }
+  .font-display { font-family: 'Fraunces', serif; font-feature-settings: "ss01" on; }
+  ::selection { background: #2563eb; color: #fff; }
+
+  /* Line clamp utilities for card text */
+  .clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* Hero ambient background and floating blob animations */
+  .hero-glow { background: radial-gradient(60% 50% at 20% 10%, rgba(4,120,87,0.32) 0%, rgba(4,120,87,0) 60%), radial-gradient(50% 45% at 85% 25%, rgba(251,191,36,0.14) 0%, rgba(251,191,36,0) 60%), radial-gradient(80% 60% at 50% 100%, rgba(15,23,42,0.9) 0%, rgba(2,6,23,1) 70%); }
+  .grain { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
+  @keyframes float-slow { 0%, 100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(20px,-24px,0) scale(1.06); } }
+  @keyframes float-slower { 0%, 100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(-24px,18px,0) scale(1.04); } }
+  .blob-a { animation: float-slow 14s ease-in-out infinite; will-change: transform; }
+  .blob-b { animation: float-slower 18s ease-in-out infinite; will-change: transform; }
+  .hero-paused .blob-a, .hero-paused .blob-b { animation-play-state: paused; will-change: auto; }
+  .dot-glow { position: relative; box-shadow: 0 0 6px 1px rgba(52, 211, 153, 0.6); }
+  .dot-glow::after { content: ''; position: absolute; inset: -4px; border-radius: 9999px; background: rgba(52, 211, 153, 0.55); animation: dot-glow-ring 1.8s ease-in-out infinite; }
+  @keyframes dot-glow-ring { 0% { opacity: 0.55; transform: scale(0.6); } 100% { opacity: 0; transform: scale(1.8); } }
+
+  /* Hero signature: verified seal badge */
+  @keyframes seal-in { 0% { transform: rotate(-16deg) scale(2.2); opacity: 0; } 60% { opacity: 1; } 100% { transform: rotate(-10deg) scale(1); opacity: 1; } }
+  .drift-seal { animation: seal-in .7s cubic-bezier(.2,.8,.2,1) both, seal-drift 6s ease-in-out infinite; animation-delay: .3s, 1s; }
+  @keyframes seal-drift { 0%, 100% { transform: rotate(-10deg) translateY(0); } 50% { transform: rotate(-10deg) translateY(-10px); } }
+
+  /* Header scroll states */
+  #site-header { background-color: rgba(2,6,23,0.55); transition: background-color .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  #site-header.scrolled { background-color: rgba(2,6,23,0.94); box-shadow: 0 8px 30px -12px rgba(0,0,0,0.6); border-bottom-color: rgba(148,163,184,0.12); }
+
+  /* Mobile menu expand/collapse */
+  #mobile-menu { transition: max-height .35s ease, opacity .3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+  #mobile-menu.open { max-height: 480px; opacity: 1; }
+
+  /* CTA button hover glow */
+  .btn-glow { transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+  .btn-glow:hover { transform: translateY(-2px) scale(1.015); box-shadow: 0 12px 28px -8px rgba(4,120,87,0.55); }
+  .btn-glow:active { transform: translateY(0) scale(0.99); }
+
+  /* Offer/course cards and responsive grid */
+  .offer-card { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease, border-color .3s ease, box-shadow .3s ease; content-visibility: auto; contain-intrinsic-size: auto 480px; }
+  @media (min-width: 640px) { .offer-card { contain-intrinsic-size: auto 440px; } }
+  @media (min-width: 1024px) { .offer-card { contain-intrinsic-size: auto 460px; } }
+  .offer-card.in-view { opacity: 1; transform: translateY(0); }
+  .offer-card:hover:not(:has(a:hover, a:active)) { transform: translateY(-6px); border-color: rgba(4,120,87,0.5); box-shadow: 0 20px 40px -18px rgba(4,120,87,0.35); }
+  .offer-card.card-gift:hover:not(:has(a:hover, a:active)) { border-color: rgba(251,191,36,0.55); box-shadow: 0 20px 40px -18px rgba(180,83,9,0.4); }
+  .cards-grid { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cards-grid .card-full { grid-column: 1 / -1; } }
+  @media (min-width: 1024px) { .cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .cards-grid .card-full { grid-column: auto; } }
+
+  /* Skeleton loading shimmer */
+  .skeleton { position: relative; overflow: hidden; background-color: rgba(148,163,184,0.08); }
+  .skeleton::after { content: ''; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(148,163,184,0.14), transparent); animation: shimmer 1.6s infinite; }
+  @keyframes shimmer { 100% { transform: translateX(100%); } }
+
+  /* Card description preview and "See more" trigger */
+  .desc-trigger { cursor: pointer; }
+  .desc-trigger:hover .clamp-3 { color: #cbd5e1; }
+  .desc-trigger:hover .see-more-tag { color: #93c5fd; }
+  .desc-trigger:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; border-radius: 6px; }
+  .see-more-tag { display: inline-flex; align-items: center; gap: 3px; color: #34d399; font-weight: 600; font-size: 0.75rem; margin-top: 0.375rem; transition: color .2s ease; }
+
+  /* Offer detail modal (view post) */
+  #offer-modal { display: none; }
+  #offer-modal.open { display: block; }
+  #modal-backdrop { opacity: 0; transition: opacity .3s ease; }
+  #offer-modal.open #modal-backdrop { opacity: 1; }
+  #modal-panel { opacity: 0; transform: translateY(24px) scale(0.98); transition: opacity .3s ease, transform .3s ease; }
+  #offer-modal.open #modal-panel { opacity: 1; transform: translateY(0) scale(1); }
+  body.modal-locked { overflow: hidden; }
+
+  /* Modal body paragraph spacing */
+  #modal-body p { margin: 0; }
+  #modal-body p + p { margin-top: 1.1rem; }
+
+  /* Reduced motion accessibility */
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .blob-a, .blob-b, .skeleton::after, .dot-glow::after, .drift-seal { animation: none; } .offer-card { transition: none; opacity: 1; transform: none; } #modal-backdrop, #modal-panel { transition: none; } }
+
+  /* Focus states and mobile backdrop-blur fallback */
+  a:focus-visible, button:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; border-radius: 6px; }
+  @media (max-width: 639px) { .backdrop-blur-md, .backdrop-blur-sm { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; } }
+</style>
+</head>
+
+<body class="bg-base-950 text-slate-200 antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 border-b border-transparent will-change-[background-color]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-[72px] flex items-center justify-between">
+
+    <a href="#top" class="flex items-center gap-2.5 shrink-0" aria-label="Home">
+      <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-500 to-accent-400 flex items-center justify-center shadow-lg shadow-blue-900/40">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="font-display font-semibold text-xl tracking-tight text-white">Hire<span class="text-accent-400">on</span></span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <a href="#offers" class="hover:text-white transition-colors">Courses</a>
+      <a href="#giftcards" class="hover:text-white transition-colors">Gift Cards</a>
+      <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
+      <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+    </nav>
+
+    <div class="hidden md:block">
+      <a href="#offers" class="btn-glow inline-flex items-center gap-2 bg-accent-600 hover:bg-accent-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full">
+        Browse Offers
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-slate-700/70 text-slate-200" aria-label="Toggle menu" aria-expanded="false">
+      <svg id="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg id="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" class="hidden"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden border-b border-slate-800/70 bg-base-950/95 backdrop-blur-md">
+    <div class="px-5 py-4 flex flex-col gap-1 text-sm font-medium text-slate-300">
+      <a href="#offers" class="py-2.5 border-b border-slate-800/60">Courses</a>
+      <a href="#giftcards" class="py-2.5 border-b border-slate-800/60">Gift Cards</a>
+      <a href="#reviews" class="py-2.5 border-b border-slate-800/60">Reviews</a>
+      <a href="#faq" class="py-2.5">FAQ</a>
+      <a href="#offers" class="btn-glow mt-3 inline-flex items-center justify-center gap-2 bg-accent-600 text-white text-sm font-semibold px-5 py-3 rounded-full min-h-[44px]">Browse Offers</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative pt-24 pb-14 md:pt-40 md:pb-20 hero-glow overflow-hidden">
+  <div class="grain absolute inset-0 pointer-events-none"></div>
+  <div class="blob-a absolute -top-24 -left-24 w-72 h-72 md:w-96 md:h-96 rounded-full bg-accent-600/20 blur-3xl pointer-events-none"></div>
+  <div class="hidden md:flex absolute top-20 right-6 lg:right-16 items-center justify-center w-28 h-28 rounded-full border-2 border-accent-400/60 bg-base-950/40 backdrop-blur-sm drift-seal" aria-hidden="true">
+    <span class="font-display font-semibold text-accent-300 text-[11px] uppercase tracking-wide leading-tight text-center -rotate-[10deg]">Verified<br>Programs<br>Board</span>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-accent-300 bg-accent-500/10 border border-accent-500/25 rounded-full px-4 py-1.5">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 dot-glow"></span>
+      Now accepting new US learners
+    </span>
+
+    <h1 class="font-display font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-tight mt-6">
+      Online courses and reward programs, <span class="text-accent-400">built for your career growth.</span>
+    </h1>
+
+    <p class="text-slate-400 text-base sm:text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+      Trusted by thousands of US learners seeking flexible online courses, verified certification programs, and exclusive consumer rewards — updated and reviewed every day.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-9">
+      <a href="#offers" class="btn-glow w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-500 text-white font-semibold px-7 py-3.5 rounded-full">
+        Explore Programs
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#trust" class="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-7 py-3.5 rounded-full transition-colors">
+        How It Works
+      </a>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="flex flex-wrap items-center justify-center gap-3 mt-12">
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="#34d399" stroke-width="1.8"/></svg>
+        Secure SSL Connection
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Verified Programs
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="#34d399" stroke-width="1.8" stroke-linecap="round"/></svg>
+        US-Based Programs
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / SOCIAL PROOF ============ -->
+<section id="trust" class="border-y border-slate-800/70 bg-base-900/60">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-full bg-accent-500/10 border border-accent-500/25 flex items-center justify-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4 8l8-6 8 6M4 8v10a2 2 0 002 2h12a2 2 0 002-2V8" stroke="#34d399" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <p class="text-sm font-medium text-slate-300">100% Free to Enroll</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-full bg-accent-500/10 border border-accent-500/25 flex items-center justify-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="#34d399" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#34d399" stroke-width="1.7"/></svg>
+      </span>
+      <p class="text-sm font-medium text-slate-300">Programs Verified Daily</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-full bg-accent-500/10 border border-accent-500/25 flex items-center justify-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="#34d399" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </span>
+      <p class="text-sm font-medium text-slate-300">US Learners Welcome</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-full bg-accent-500/10 border border-accent-500/25 flex items-center justify-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#34d399" stroke-width="1.7"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#34d399" stroke-width="1.7"/></svg>
+      </span>
+      <p class="text-sm font-medium text-slate-300">Secure &amp; Encrypted</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFERS ============ -->
+<section id="offers" class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+  <div class="max-w-2xl mx-auto text-center mb-9 md:mb-10">
+    <span class="text-xs font-semibold tracking-wide uppercase text-accent-400">Live Programs</span>
+    <h2 class="font-display font-bold text-white text-3xl sm:text-4xl mt-3">Current Programs</h2>
+    <p class="text-slate-400 mt-3">Browse verified online courses and certification programs available to US learners right now.</p>
+  </div>
+
+  <div id="offers-grid" class="cards-grid gap-4 sm:gap-5 md:gap-6">
+    <!-- Skeleton loaders shown while offers.json is fetched -->
+  </div>
+
+  <div id="offers-empty" class="hidden text-center py-20">
+    <div class="w-14 h-14 mx-auto rounded-full bg-slate-800/70 border border-slate-700 flex items-center justify-center mb-4">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 9h.01M15 9h.01M8 15s1.5 2 4 2 4-2 4-2" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#94a3b8" stroke-width="1.8"/></svg>
+    </div>
+    <p class="text-slate-300 font-semibold">No programs available right now</p>
+    <p class="text-slate-500 text-sm mt-1">Please check back shortly — new programs are added regularly.</p>
+  </div>
+</section>
+
+<!-- ============ GIFT CARDS ============ -->
+<section id="giftcards" class="border-t border-slate-800/70 bg-base-900/40">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+
+    <div class="max-w-2xl mx-auto text-center mb-7">
+      <span class="text-xs font-semibold tracking-wide uppercase text-amber-400">Reward Marketplace</span>
+      <h2 class="font-display font-bold text-white text-3xl sm:text-4xl mt-3">Gift Card Rewards</h2>
+      <p class="text-slate-400 mt-3">Redeem free and discounted gift cards from top US retailers — reviewed, verified, and ready to claim.</p>
+    </div>
+
+    <!-- Gift card trust bar -->
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-amber-500/5 backdrop-blur-md border border-amber-500/15 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        Instant Digital Delivery
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-amber-500/5 backdrop-blur-md border border-amber-500/15 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="#fbbf24" stroke-width="1.8"/><path d="M9.5 12l1.8 1.8L14.5 10" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Verified Merchant Codes
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-amber-500/5 backdrop-blur-md border border-amber-500/15 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fbbf24" stroke-width="1.8"/><path d="M8 8l8 8M8 8a2.5 2.5 0 103.5 3.5" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/></svg>
+        No Hidden Fees
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 bg-amber-500/5 backdrop-blur-md border border-amber-500/15 rounded-full px-4 py-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="#fbbf24" stroke-width="1.8"/></svg>
+        Redeemable Nationwide
+      </span>
+    </div>
+
+    <div id="giftcards-grid" class="cards-grid gap-4 sm:gap-5 md:gap-6">
+      <!-- Skeleton loaders shown while giftcards.json is fetched -->
+    </div>
+
+    <div id="giftcards-empty" class="hidden text-center py-20">
+      <div class="w-14 h-14 mx-auto rounded-full bg-slate-800/70 border border-slate-700 flex items-center justify-center mb-4">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 9h.01M15 9h.01M8 15s1.5 2 4 2 4-2 4-2" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#94a3b8" stroke-width="1.8"/></svg>
+      </div>
+      <p class="text-slate-300 font-semibold">No gift card rewards available right now</p>
+      <p class="text-slate-500 text-sm mt-1">Please check back shortly — new rewards are added regularly.</p>
+    </div>
+
+    <!-- Redemption reassurance strip -->
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center">
+      <span class="inline-flex items-center gap-2 text-xs text-slate-500">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#64748b" stroke-width="1.6"/><path d="M3 9h18" stroke="#64748b" stroke-width="1.6"/></svg>
+        Every reward is independently reviewed before publication
+      </span>
+      <span class="inline-flex items-center gap-2 text-xs text-slate-500">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="#64748b" stroke-width="1.6"/></svg>
+        No purchase or subscription required to redeem
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="border-t border-slate-800/70">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 md:py-20">
+
+    <div class="max-w-2xl mx-auto text-center mb-6">
+      <span class="text-xs font-semibold tracking-wide uppercase text-accent-400">Real Feedback</span>
+      <h2 class="font-display font-bold text-white text-3xl sm:text-4xl mt-3">What US members are saying</h2>
+    </div>
+
+    <!-- Aggregate rating strip -->
+    <div class="flex flex-col items-center gap-2 mb-10">
+      <div class="flex items-center gap-1" aria-label="Rated 4.8 out of 5 stars">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+      </div>
+      <p class="text-sm text-slate-400"><span class="text-white font-semibold">4.8 out of 5</span> from over 2,300 verified US members</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+
+      <div class="rounded-2xl border border-slate-800 bg-base-850/60 p-5 sm:p-6 flex flex-col">
+        <div class="flex items-center gap-0.5 mb-3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed flex-1">"Finished a certification program in about two weeks. Every course I clicked into matched what was actually described — no bait and switch."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-800">
+          <span class="w-9 h-9 shrink-0 rounded-full bg-accent-500/15 border border-accent-500/25 flex items-center justify-center text-xs font-semibold text-accent-300">JM</span>
+          <div class="min-w-0">
+            <p class="text-sm font-semibold text-slate-200 truncate">Jordan M.</p>
+            <p class="text-xs text-slate-500">Austin, TX</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-base-850/60 p-5 sm:p-6 flex flex-col">
+        <div class="flex items-center gap-0.5 mb-3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed flex-1">"Redeemed a gift card reward in about ten minutes, code worked immediately at checkout. Didn't expect it to be this straightforward."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-800">
+          <span class="w-9 h-9 shrink-0 rounded-full bg-amber-500/15 border border-amber-400/25 flex items-center justify-center text-xs font-semibold text-amber-300">RS</span>
+          <div class="min-w-0">
+            <p class="text-sm font-semibold text-slate-200 truncate">Renee S.</p>
+            <p class="text-xs text-slate-500">Columbus, OH</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-base-850/60 p-5 sm:p-6 flex flex-col sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-0.5 mb-3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7z"/></svg>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed flex-1">"Appreciated that every course listed duration and format upfront. Enrolled in three programs, finished two within weeks."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-800">
+          <span class="w-9 h-9 shrink-0 rounded-full bg-accent-500/15 border border-accent-500/25 flex items-center justify-center text-xs font-semibold text-accent-300">DK</span>
+          <div class="min-w-0">
+            <p class="text-sm font-semibold text-slate-200 truncate">Devon K.</p>
+            <p class="text-xs text-slate-500">Tampa, FL</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="border-t border-slate-800/70 bg-base-900/40">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 py-14 md:py-16">
+    <h2 class="font-display font-bold text-white text-2xl sm:text-3xl text-center mb-8">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <details class="group bg-base-850/60 border border-slate-800 rounded-xl px-5 py-4">
+        <summary class="flex items-center justify-between cursor-pointer text-slate-100 font-medium list-none">
+          Is it free to enroll in these programs?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">Yes. Browsing and exploring our programs is always free for US learners.</p>
+      </details>
+      <details class="group bg-base-850/60 border border-slate-800 rounded-xl px-5 py-4">
+        <summary class="flex items-center justify-between cursor-pointer text-slate-100 font-medium list-none">
+          How often are listings updated?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">Our listings are reviewed and refreshed daily to keep opportunities current and relevant.</p>
+      </details>
+      <details class="group bg-base-850/60 border border-slate-800 rounded-xl px-5 py-4">
+        <summary class="flex items-center justify-between cursor-pointer text-slate-100 font-medium list-none">
+          Who can enroll?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">Most programs are open to US residents aged 18 and older. Specific eligibility is noted on each program.</p>
+      </details>
+      <details class="group bg-base-850/60 border border-slate-800 rounded-xl px-5 py-4">
+        <summary class="flex items-center justify-between cursor-pointer text-slate-100 font-medium list-none">
+          How do I receive my gift card reward?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">Gift card rewards are delivered digitally after you complete the steps listed on the individual offer. Delivery times are noted on each card.</p>
+      </details>
+      <details class="group bg-base-850/60 border border-slate-800 rounded-xl px-5 py-4">
+        <summary class="flex items-center justify-between cursor-pointer text-slate-100 font-medium list-none">
+          Are the gift card offers really free?
+          <svg class="shrink-0 transition-transform group-open:rotate-45" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#34d399" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">No purchase is required to redeem a listed reward. Some partners may require a short set of steps or a survey to qualify, which is always disclosed on the offer.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-slate-800/70 bg-base-950">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <a href="#top" class="flex items-center gap-2.5 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-500 to-accent-400 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="font-display font-semibold text-white">Hire<span class="text-accent-400">on</span></span>
+        </a>
+        <p class="text-sm text-slate-500 leading-relaxed max-w-xs">Connecting US learners with verified online courses, certification programs, and exclusive consumer rewards.</p>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold text-slate-200 mb-4">Quick Links</p>
+        <ul class="space-y-2.5 text-sm text-slate-500">
+          <li><a href="privacy-policy.html" class="hover:text-slate-300 transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html" class="hover:text-slate-300 transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-slate-300 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold text-slate-200 mb-4">Disclosure</p>
+        <p class="text-xs text-slate-500 leading-relaxed">This site may contain affiliate and CPA offer links. We are not a direct provider of any listed program, and we may receive compensation when you engage with listed offers. All listings are independently reviewed before publication.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800/70 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs text-slate-600">© <span id="year"></span> Hireon. All rights reserved.</p>
+      <p class="text-xs text-slate-600">Made for US learners.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ OFFER DETAIL MODAL (VIEW POST) ============ -->
+<div id="offer-modal" class="fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+  <div id="modal-backdrop" class="absolute inset-0 bg-base-950/80 backdrop-blur-sm"></div>
+
+  <div class="relative h-full w-full flex items-center justify-center p-3 sm:p-6 md:p-10">
+    <div id="modal-panel" class="w-full max-w-3xl h-full sm:h-auto sm:max-h-[88vh] bg-base-850 border border-slate-800 rounded-2xl shadow-2xl shadow-black/60 flex flex-col overflow-hidden">
+
+      <!-- Sticky modal header -->
+      <div class="sticky top-0 z-10 flex items-start justify-between gap-4 px-5 sm:px-7 py-4 sm:py-5 border-b border-slate-800 bg-base-850/95 backdrop-blur-md">
+        <div class="flex-1 min-w-0">
+          <span id="modal-category" class="inline-block text-[11px] font-semibold uppercase tracking-wide text-accent-300 bg-accent-500/10 border border-accent-500/25 rounded-full px-3 py-1 mb-2"></span>
+          <h2 id="modal-title-text" class="font-display font-semibold text-white text-lg sm:text-2xl leading-snug"></h2>
+        </div>
+        <button id="modal-close" type="button" aria-label="Close" class="shrink-0 w-10 h-10 rounded-full border border-slate-700 hover:border-slate-500 bg-base-900/80 flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Scrollable content (only this area scrolls, not the whole card) -->
+      <div id="modal-scroll" class="flex-1 overflow-y-auto overscroll-contain">
+        <div class="relative w-full aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-slate-800">
+          <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+        </div>
+
+        <div class="px-5 sm:px-8 py-6 sm:py-8">
+          <div class="flex items-center justify-between text-xs text-slate-500 pb-5 mb-1 border-b border-slate-800">
+            <span id="modal-signature" class="inline-flex items-center gap-1.5 font-medium text-slate-300"></span>
+            <span id="modal-date"></span>
+          </div>
+
+          <div id="modal-body" class="mt-5 text-slate-300 text-[15px] leading-relaxed"></div>
+        </div>
+      </div>
+
+      <!-- Sticky apply footer -->
+      <div class="px-5 sm:px-8 py-4 sm:py-5 border-t border-slate-800 bg-base-850/95 backdrop-blur-md">
+        <a id="modal-apply" href="#" target="_blank" rel="noopener noreferrer sponsored"
+          class="btn-glow min-h-[44px] w-full inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-500 text-white text-sm font-semibold px-5 py-3.5 rounded-full">
+          Enroll Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // ---------- Footer year ----------
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- Header scroll state (rAF-throttled to avoid scroll jank) ----------
+  const header = document.getElementById('site-header');
+  let scrollTicking = false;
+  const applyScrollState = () => {
+    if (window.scrollY > 12) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+    scrollTicking = false;
+  };
+  const onScroll = () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(applyScrollState);
+      scrollTicking = true;
+    }
+  };
+  applyScrollState();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ---------- Mobile menu ----------
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '80px 0px' });
+
+  const heroSection = document.getElementById('top');
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        heroSection.classList.toggle('hero-paused', !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    heroObserver.observe(heroSection);
+  }
+  
+  function escapeHTML(str) {
+    if (str === undefined || str === null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  // ---------- Date formatter ----------
+  function formatDate(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    if (isNaN(d.getTime())) return escapeHTML(dateStr || '');
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  // ---------- Description normalizer ----------
+  // Supports offers.json "description" as either:
+  //   a) an array of paragraph strings: ["para 1", "para 2", "para 3"]
+  //   b) a plain string with blank-line-separated paragraphs
+  //   c) a single plain string (treated as one paragraph)
+  // Card previews and the modal both read from this same normalized list,
+  // so any number of paragraphs (1 or many) works with zero code changes.
+  function normalizeParagraphs(desc) {
+    if (Array.isArray(desc)) {
+      return desc.map(p => String(p).trim()).filter(Boolean);
+    }
+    if (typeof desc === 'string' && desc.trim()) {
+      const parts = desc.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+      return parts.length ? parts : [desc.trim()];
+    }
+    return [];
+  }
+
+  // ---------- Skeleton cards ----------
+  function renderSkeletons(grid, count) {
+    grid.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement('div');
+      el.className = 'rounded-2xl border border-slate-800 bg-base-850/60 overflow-hidden';
+      el.innerHTML = `
+        <div class="skeleton h-44 w-full"></div>
+        <div class="p-5 space-y-3">
+          <div class="skeleton h-4 w-3/4 rounded"></div>
+          <div class="skeleton h-4 w-1/2 rounded"></div>
+          <div class="skeleton h-3 w-full rounded"></div>
+          <div class="skeleton h-3 w-5/6 rounded"></div>
+          <div class="skeleton h-10 w-full rounded-full mt-4"></div>
+        </div>`;
+      grid.appendChild(el);
+    }
+  }
+
+  // ---------- Type presets ----------
+  const TYPE_PRESETS = {
+    job: {
+      ctaLabel: 'Enroll Now',
+      typeIcon: '<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 4L2 9l10 5 8-4.1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      typeLabel: 'Course',
+      cardExtraClass: '',
+      badgeClass: 'bg-slate-900/70 border-white/10 text-white',
+      signatureIcon: '<svg class="shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      ctaClass: 'bg-accent-600 hover:bg-accent-500 text-white'
+    },
+    giftcard: {
+      ctaLabel: 'Redeem Now',
+      typeIcon: '<svg width="11" height="11" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="12" rx="1.5" stroke="white" stroke-width="2"/><path d="M12 9v12M3 13h18" stroke="white" stroke-width="2"/><path d="M12 9c-1.7 0-3.4-.9-3.4-2.6A2.4 2.4 0 0111 4c1.7 0 1 3.2 1 5zm0 0c1.7 0 3.4-.9 3.4-2.6A2.4 2.4 0 0013 4c-1.7 0-1 3.2-1 5z" stroke="white" stroke-width="1.7" stroke-linejoin="round"/></svg>',
+      typeLabel: 'Reward',
+      cardExtraClass: 'card-gift border-amber-500/20',
+      badgeClass: 'bg-amber-950/70 border-amber-400/25 text-amber-50',
+      signatureIcon: '<svg class="shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      ctaClass: 'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-amber-950'
+    }
+  };
+
+  function resolveGiftValue(offer) {
+    return offer.value ? String(offer.value).trim() : null;
+  }
+
+  // ---------- Card renderer ----------
+  function createCard(offer, type) {
+    const preset = TYPE_PRESETS[type] || TYPE_PRESETS.job;
+    const isGift = type === 'giftcard';
+    const card = document.createElement('article');
+    card.className = `offer-card group rounded-2xl border bg-base-850/60 backdrop-blur-sm overflow-hidden flex flex-col ${isGift ? preset.cardExtraClass : 'border-slate-800'}`;
+
+    const title = escapeHTML(offer.title || 'Untitled Offer');
+    const paragraphs = normalizeParagraphs(offer.description);
+    const previewText = escapeHTML(paragraphs.join(' '));
+    const category = escapeHTML(offer.category || preset.typeLabel);
+    const signature = escapeHTML(offer.signature || 'Verified Partner');
+    const image = escapeHTML(offer.image || '');
+    const link = escapeHTML(offer.link || '#');
+    const dateLabel = formatDate(offer.date);
+    const giftValue = isGift ? resolveGiftValue(offer) : null;
+
+    const valuePlateHTML = giftValue ? `
+        <span class="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 inline-flex items-baseline gap-1 rounded-lg bg-gradient-to-r from-amber-300 to-amber-400 text-amber-950 font-display font-bold text-sm sm:text-base px-3 py-1.5 shadow-lg shadow-black/30">
+          ${escapeHTML(giftValue)}
+          <span class="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide font-body">value</span>
+        </span>` : '';
+
+    card.innerHTML = `
+      <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-800">
+        <img
+          src="${image}"
+          alt="${title}"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80';"
+        >
+        ${isGift ? '<div class="absolute inset-0 bg-gradient-to-t from-amber-950/70 via-transparent to-transparent"></div>' : ''}
+        <span class="absolute top-2 left-2 sm:top-3 sm:left-3 inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide backdrop-blur-md border rounded-full px-2.5 sm:px-3 py-1 ${preset.badgeClass}">
+          ${preset.typeIcon}
+          <span class="truncate max-w-[8rem] sm:max-w-[9rem] inline-block align-middle">${category}</span>
+        </span>
+        ${valuePlateHTML}
+      </div>
+
+      <div class="p-3 sm:p-4 md:p-5 flex flex-col">
+        <h3 class="font-display font-semibold text-white text-sm sm:text-base md:text-lg leading-snug clamp-2 min-h-[2.4rem] sm:min-h-[3.1rem]">${title}</h3>
+
+        <div class="desc-trigger h-[3.6rem] sm:h-[4.6rem] md:h-[5.85rem] overflow-hidden mt-1.5 sm:mt-2" role="button" tabindex="0" aria-label="Read full description">
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed clamp-3">${previewText}</p>
+          <span class="see-more-tag">
+            See more
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+
+        <div class="flex items-center justify-between text-[10px] sm:text-xs text-slate-500 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-800 gap-2">
+          <span class="inline-flex items-center gap-1 sm:gap-1.5 font-medium text-slate-300 truncate">
+            ${preset.signatureIcon}
+            <span class="truncate">${signature}</span>
+          </span>
+          <span class="shrink-0">${dateLabel}</span>
+        </div>
+
+        <a
+          href="${link}"
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          class="btn-glow mt-3 sm:mt-4 md:mt-5 min-h-[40px] sm:min-h-[44px] w-full inline-flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2.5 sm:py-3 rounded-full ${preset.ctaClass}"
+        >
+          ${preset.ctaLabel}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    `;
+
+    const descTrigger = card.querySelector('.desc-trigger');
+    const openHandler = () => {
+      const modalParagraphs = paragraphs.length ? paragraphs : ['No additional details provided for this offer.'];
+      openOfferModal(offer, modalParagraphs, preset);
+    };
+    descTrigger.addEventListener('click', openHandler);
+    descTrigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openHandler();
+      }
+    });
+
+    return card;
+  }
+
+  // ---------- Load listings (single source file, grouped by type) ----------
+  // Expected offers.json shape:
+  // { "jobs": [ {...}, {...}, {...}, {...} ], "giftcards": [ {...}, {...}, {...}, {...} ] }
+  function renderGroup(list, gridId, emptyId, type) {
+    const grid = document.getElementById(gridId);
+    const emptyState = document.getElementById(emptyId);
+    if (!grid) return;
+
+    if (!Array.isArray(list) || list.length === 0) {
+      grid.innerHTML = '';
+      if (emptyState) emptyState.classList.remove('hidden');
+      return;
+    }
+
+    grid.innerHTML = '';
+    if (emptyState) emptyState.classList.add('hidden');
+
+    const isOddCount = list.length % 2 === 1;
+
+    list.forEach((offer, index) => {
+      const card = createCard(offer, type);
+      if (isOddCount && index === list.length - 1) {
+        card.classList.add('card-full');
+      }
+      grid.appendChild(card);
+      observer.observe(card);
+    });
+  }
+
+  async function loadListings() {
+    renderSkeletons(document.getElementById('offers-grid'), 4);
+    renderSkeletons(document.getElementById('giftcards-grid'), 4);
+
+    try {
+      const res = await fetch('./offers.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('Network response was not ok');
+      const data = await res.json();
+
+      renderGroup(data && data.jobs, 'offers-grid', 'offers-empty', 'job');
+      renderGroup(data && data.giftcards, 'giftcards-grid', 'giftcards-empty', 'giftcard');
+    } catch (err) {
+      console.error('Failed to load offers.json:', err);
+      ['offers-grid', 'giftcards-grid'].forEach(id => {
+        const grid = document.getElementById(id);
+        if (grid) grid.innerHTML = '';
+      });
+      ['offers-empty', 'giftcards-empty'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('hidden');
+      });
+    }
+  }
+
+  // ---------- Offer detail modal (view post) ----------
+  const modalEl = document.getElementById('offer-modal');
+  const modalCloseBtn = document.getElementById('modal-close');
+  const modalBackdropEl = document.getElementById('modal-backdrop');
+  const modalTitleEl = document.getElementById('modal-title-text');
+  const modalCategoryEl = document.getElementById('modal-category');
+  const modalImageEl = document.getElementById('modal-image');
+  const modalSignatureEl = document.getElementById('modal-signature');
+  const modalDateEl = document.getElementById('modal-date');
+  const modalBodyEl = document.getElementById('modal-body');
+  const modalApplyEl = document.getElementById('modal-apply');
+  const modalScrollEl = document.getElementById('modal-scroll');
+
+  let lastFocusedElement = null;
+
+  function openOfferModal(offer, paragraphs, preset) {
+    lastFocusedElement = document.activeElement;
+    const ctaLabel = (preset && preset.ctaLabel) || 'Enroll Now';
+
+    modalTitleEl.textContent = offer.title || 'Untitled Offer';
+    modalCategoryEl.textContent = offer.category || 'Offer';
+
+    modalImageEl.src = offer.image || '';
+    modalImageEl.alt = offer.title || '';
+    modalImageEl.onerror = function () {
+      this.onerror = null;
+      this.src = 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80';
+    };
+
+    modalSignatureEl.innerHTML = `
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 12l3.2 3.2L17 8.4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>${escapeHTML(offer.signature || 'Verified Partner')}</span>
+    `;
+    modalDateEl.textContent = formatDate(offer.date);
+
+    modalBodyEl.innerHTML = paragraphs.map(p => `<p>${escapeHTML(p)}</p>`).join('');
+    modalApplyEl.href = offer.link || '#';
+    modalApplyEl.innerHTML = `
+      ${escapeHTML(ctaLabel)}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    `;
+
+    modalScrollEl.scrollTop = 0;
+    modalEl.classList.add('open');
+    document.body.classList.add('modal-locked');
+
+    modalCloseBtn.focus();
+    document.addEventListener('keydown', onModalKeydown);
+  }
+
+  function closeOfferModal() {
+    modalEl.classList.remove('open');
+    document.body.classList.remove('modal-locked');
+    document.removeEventListener('keydown', onModalKeydown);
+
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
+  }
+
+  function onModalKeydown(e) {
+    if (e.key === 'Escape') closeOfferModal();
+  }
+
+  modalCloseBtn.addEventListener('click', closeOfferModal);
+  modalBackdropEl.addEventListener('click', closeOfferModal);
+
+  loadListings();
+})();
+</script>
+</body>
+</html>

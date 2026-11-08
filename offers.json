@@ -1,0 +1,152 @@
+{
+  "jobs": [
+    {
+      "id": "ofr-1001",
+      "title": "Customer Service Certification – Self-Paced Online Course",
+      "description": [
+        "Build in-demand customer service skills with a self-paced online certification designed for US learners. No prior experience required, and the full curriculum is included from day one.",
+        "You'll learn how to handle live chat and email support scenarios, resolve common customer issues, and escalate complex cases the way professional support teams do. Lessons are flexible, so you can study part-time or move through the material full-time.",
+        "Graduates receive a verified digital certificate upon completion, making it a great addition to your resume for remote support roles."
+      ],
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80",
+      "link": "#",
+      "category": "Certification Program",
+      "signature": "BrightPath Learning",
+      "date": "2026-08-18"
+    },
+    {
+      "id": "ofr-1002",
+      "title": "Virtual Assistant & Office Skills Course – Enroll Today",
+      "description": [
+        "A flexible, self-paced online course covering the core skills used in virtual assistant and administrative roles across the United States. Study on your own schedule at no cost to enroll.",
+        "You'll learn how to organize spreadsheets, manage email inboxes, schedule appointments, and handle light data entry the way real small-business clients expect. No degree is required, but strong attention to detail will help you get the most out of the material.",
+        "New learners typically complete the core modules within 3–5 business days. A basic equipment checklist (laptop and stable internet) is provided during onboarding."
+      ],
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+      "link": "#",
+      "category": "Online Course",
+      "signature": "Northline Learning",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "ofr-1003",
+      "title": "Digital Marketing Fundamentals & Social Media Strategy",
+      "description": [
+        "Master the foundational pillars of modern digital marketing, content planning, and social media audience engagement through an interactive online curriculum.",
+        "Designed specifically for beginners looking to break into digital branding or small business management, this program breaks down ad campaigns, audience analytics, and content calendars into easy-to-digest modules.",
+        "Study at your own pace from any US location with 24/7 access to updated study guides and practical case studies."
+      ],
+      "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80",
+      "link": "#",
+      "category": "Marketing Program",
+      "signature": "Nexus Media Academy",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "ofr-1004",
+      "title": "Project Management Essentials – Certified Learning Track",
+      "description": [
+        "Learn core project management frameworks, task scheduling, and team coordination strategies utilized by top-tier corporate environments in the US.",
+        "This program focuses on practical milestone tracking, risk management, and resource allocation using industry-standard tools.",
+        "Complete the self-paced coursework and unlock your verifiable credential to boost your career prospects immediately."
+      ],
+      "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80",
+      "link": "#",
+      "category": "Career Certification",
+      "signature": "Apex Career Institute",
+      "date": "2026-08-15"
+    },
+    {
+      "id": "ofr-1005",
+      "title": "Sales & Negotiation Certification – Self-Paced Online Program",
+      "description": [
+        "A practical, self-paced certification program covering modern sales and negotiation skills, built for US learners at any experience level.",
+        "You'll practice outreach scripts, objection handling, and CRM workflows used by real sales teams — through guided lessons and scenario-based exercises, not cold-calling lists. A structured onboarding module walks you through everything in your first week.",
+        "Top-performing graduates often go on to sales roles with commission-based pay, and the program includes bonus modules for learners who complete every module on time."
+      ],
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
+      "link": "#",
+      "category": "Certification Program",
+      "signature": "Summit Learning Group",
+      "date": "2026-08-14"
+    }
+  ],
+  "giftcards": [
+    {
+      "id": "gft-2001",
+      "title": "$90 Amazon Gift Card – Instant Digital Delivery",
+      "value": "$90",
+      "description": [
+        "Claim a $90 Amazon gift card, delivered digitally straight to your email as soon as your eligibility is confirmed. No purchase is required to qualify.",
+        "The code works on virtually anything sold on Amazon.com — electronics, groceries, household essentials, and more. Codes are issued directly from a verified merchant partner, so there's nothing to install and nothing to buy first.",
+        "Most recipients receive their code within minutes of completing the short verification steps listed on the offer page."
+      ],
+      "image": "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800&q=80",
+      "link": "#",
+      "category": "Amazon Gift Card",
+      "signature": "RewardVault US",
+      "date": "2026-08-18"
+    },
+    {
+      "id": "gft-2002",
+      "title": "$50 Walmart Gift Card – Redeemable In-Store & Online",
+      "value": "$50",
+      "description": [
+        "Unlock a $50 Walmart gift card usable at any US Walmart location or on Walmart.com, from groceries to electronics and everyday essentials.",
+        "This offer is open to US residents 18 and older. Once your details are verified, the digital code is sent to your inbox with clear redemption instructions.",
+        "Codes are issued by a verified merchant network and never expire once delivered, so you can use the full balance whenever it's convenient."
+      ],
+      "image": "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=800&q=80",
+      "link": "#",
+      "category": "Walmart Gift Card",
+      "signature": "GiftHub Rewards",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "gft-2003",
+      "title": "$75 Visa Prepaid Gift Card – Use Anywhere Visa Is Accepted",
+      "value": "$75",
+      "description": [
+        "Get a $75 Visa prepaid gift card that works anywhere major debit cards are accepted, both online and in physical stores across the US.",
+        "Unlike single-retailer cards, this one isn't tied to a specific store — spend it on groceries, gas, streaming subscriptions, or anything else you choose.",
+        "There's no purchase necessary and no monthly fees. Once your eligibility is confirmed, the digital card details are emailed to you along with simple activation steps.",
+        "Availability is limited on a rolling monthly basis, so completed verifications are processed in the order they're received."
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "link": "#",
+      "category": "Visa Gift Card",
+      "signature": "Verified Merchant Network",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "gft-2004",
+      "title": "$100 Target Gift Card – Shop Your Favorite Brands",
+      "value": "$100",
+      "description": [
+        "Claim a $100 Target gift card valid for nationwide in-store shopping or online orders across apparel, home decor, electronics, and daily essentials.",
+        "Participating US members can qualify by following the simple verification steps outlined on the offer portal.",
+        "Digital codes are securely generated and dispatched directly to your registered email upon successful confirmation."
+      ],
+      "image": "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=800&q=80",
+      "link": "#",
+      "category": "Target Gift Card",
+      "signature": "Retail Perks US",
+      "date": "2026-08-15"
+    },
+    {
+      "id": "gft-2005",
+      "title": "$60 PayPal Cash Reward – Direct Digital Transfer",
+      "value": "$60",
+      "description": [
+        "Redeem a $60 PayPal cash reward directly sent to your active US PayPal account following quick account confirmation and offer completion.",
+        "Flexible and universal—use your cash balance for online shopping, bills, or transfer it to your linked bank account effortlessly.",
+        "Fast-tracked processing ensures quick distribution for qualified participants."
+      ],
+      "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80",
+      "link": "#",
+      "category": "Cash Reward",
+      "signature": "CashReward Hub",
+      "date": "2026-08-14"
+    }
+  ]
+}

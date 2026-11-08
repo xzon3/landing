@@ -1,0 +1,19 @@
+{
+  "headers": [
+    {
+      "source": "/offers.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!offers.json|output.css|favicon.ico).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
